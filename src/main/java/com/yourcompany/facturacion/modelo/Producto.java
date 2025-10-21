@@ -1,5 +1,4 @@
 package com.yourcompany.facturacion.modelo;
-
 import java.math.*;
 
 import javax.persistence.*;
@@ -26,5 +25,8 @@ public class Producto {
      
     @TextArea
     String observaciones;
- 
+    
+    @ManyToOne(fetch=FetchType.LAZY)
+    @DescriptionsList
+    Autor autor;
 }
