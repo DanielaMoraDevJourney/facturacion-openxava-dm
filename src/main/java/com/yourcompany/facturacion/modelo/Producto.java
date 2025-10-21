@@ -29,4 +29,10 @@ public class Producto {
     @ManyToOne(fetch=FetchType.LAZY)
     @DescriptionsList
     Autor autor;
+    
+    @ManyToOne
+	(fetch=FetchType.LAZY,
+	optional=true)
+	@DescriptionsList	
+	Categoria categoria;
 }
